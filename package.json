@@ -1,0 +1,14 @@
+{
+  "name": "Taptendance",
+  "version": "1.0.0",
+  "description": "QR-based attendance checker with camera toggle and Google Sheets integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Kean",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

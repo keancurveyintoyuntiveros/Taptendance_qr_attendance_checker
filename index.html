@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aptendance</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Aptendance</h1>
+    <input type="text" id="sheetUrl" placeholder="Paste Google Sheet CSV URL" />
+    <button id="loadSheet">Load Student Data</button>
+
+    <div id="cameraSelectContainer">
+      <label for="cameraSelect">Choose Camera:</label>
+      <select id="cameraSelect"></select>
+    </div>
+
+    <div id="reader" style="width: 100%; max-width: 500px;"></div>
+
+    <div id="studentInfo" class="card hidden">
+      <h2>Student Info</h2>
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Address:</strong> <span id="address"></span></p>
+      <p><strong>Student Number:</strong> <span id="number"></span></p>
+      <p><strong>Section:</strong> <span id="section"></span></p>
+    </div>
+
+    <div id="attendanceLog" class="card hidden">
+      <h2>Attendance Log</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Student #</th>
+            <th>Section</th>
+          </tr>
+        </thead>
+        <tbody id="logBody"></tbody>
+      </table>
+      <button id="exportCsv">Export Attendance CSV</button>
+    </div>
+  </div>
+</body>
+</html>
